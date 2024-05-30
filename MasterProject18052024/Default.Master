@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="MasterProject18052024.Default" %>
+<%@ Register Src="~/Header.ascx" TagName="Header1" TagPrefix="hdr1"%>
+<%@ Register Src="~/Footer.ascx" TagName="Footer1" TagPrefix="ftr1"%>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    
+    <script src="jquery.js"></script>
+    <link href="menu.css" rel="stylesheet" />
+    <script src="menu.js"></script>
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table>
+                <tr>
+                    <td> 
+                        <hdr1:Header1 ID="He1" runat="server" />
+                    </td>
+                </tr>
+
+                            <tr>
+                                  <td>
+                          <div id="menu">
+                         	<ul class="menu">
+	                    	<li><a href="UserForm.aspx" class="parent"><span>User</span></a>
+	
+	                           	<li><a href="EmployeeForm.aspx"><span>Employee</span></a></li>
+	                                     </ul>
+                                         </div>
+                </td>
+            </tr>
+
+
+                <tr>
+                    <td style="height:350px;vertical-align:top; background-color:lightgreen"; > 
+                        <center> <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                            </center> 
+                            </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ftr1:Footer1 ID ="Fo1" runat="server" />
+                    </td>
+                </tr>
+            </table>
+
+
+           
+        </div>
+    </form>
+</body>
+</html>
